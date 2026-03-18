@@ -15,7 +15,7 @@ QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 COLLECTION_NAME = "thailand_rules"
 EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-large"  # 1024 dim
 
-INPUT_FILE = Path(r"backend\data\knowledge\thailand_all_sources.md")
+INPUT_FILE = Path(r"backend/data/knowledge/thailand_all_sources.md")
 CHUNK_SIZE = 960
 CHUNK_OVERLAP = 160
 
