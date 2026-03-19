@@ -16,7 +16,15 @@ export default function ChatWindow({ country }: Props) {
   const [input, setInput] = useState("")
   const [isTyping, setIsTyping] = useState(false)
 
-  const sessionId = uuidv4()
+  const [sessionId] = useState(uuidv4())
+
+  const countryMap: Record<string, string> = {
+    "Таиланд": "thailand",
+    "ОАЭ": "uae",
+    "Турция": "turkey",
+    "Вьетнам": "vietnam",
+    "Шри-Ланка": "srilanka"
+  }
 
   const handleSend = async () => {
 
@@ -30,7 +38,9 @@ export default function ChatWindow({ country }: Props) {
     setInput("")
     setIsTyping(true)
 
-    const response = await sendMessage(input, sessionId, country)
+    const backendCountry = countryMap[country] || country
+
+    const response = await sendMessage(input, sessionId, backendCountry)
 
     setIsTyping(false)
 
