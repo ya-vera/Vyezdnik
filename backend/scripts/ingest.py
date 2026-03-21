@@ -8,12 +8,13 @@ from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 import uuid
 import time
+from tqdm import tqdm
 
 
 QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 COLLECTION_NAME = "thailand_rules"
-EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-large"  # 1024 dim
+EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-large" 
 
 INPUT_FILE = Path(r"backend/data/knowledge/thailand_all_sources.md")
 CHUNK_SIZE = 960
@@ -120,25 +121,30 @@ def split_by_sources(md_path: Path):
     return all_chunks
 
 
-def embed_and_upload(chunks_with_meta, embedder):
-    points = []
+def embed_and_upload(chunks_with_meta, embedder, batch_size=32, limit=None):
+    if limit is not None:
+        chunks_with_meta = chunks_with_meta[:limit]
 
-    for item in chunks_with_meta:
-        vector = embedder.encode(item["text"]).tolist()
-        payload = {
-            "text": item["text"],
-            **item["metadata"]
-        }
+    texts = [item["text"] for item in chunks_with_meta]
 
-        points.append(PointStruct(
-            id=str(uuid.uuid4()),
-            vector=vector,
-            payload=payload
-        ))
+    for i in tqdm(range(0, len(texts), batch_size), desc="Processing batches"):
+        batch_texts = texts[i:i+batch_size]
+        vectors = embedder.encode(batch_texts, show_progress_bar=False)
+        
+        points = []
+        for j, item_idx in enumerate(range(i, i + len(batch_texts))):
+            item = chunks_with_meta[item_idx]
+            payload = {
+                "text": item["text"],
+                **item["metadata"]
+            }
+            points.append(PointStruct(
+                id=str(uuid.uuid4()),
+                vector=vectors[j].tolist(),
+                payload=payload
+            ))
 
-    if points:
         client.upsert(collection_name=COLLECTION_NAME, points=points)
-        print(f"[{datetime.now()}] Загружено в Qdrant: {len(points)} чанков")
 
 
 def main():

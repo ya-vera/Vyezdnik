@@ -16,7 +16,7 @@ export default function TypingIndicator() {
   return (
     <div className="flex justify-start mb-3">
       <div className="bg-gray-200 px-4 py-2 rounded-lg text-gray-600 text-sm">
-        Печатает{dots}
+        Думает{dots}
       </div>
     </div>
   )
