@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Message } from "@/types/chat"
 import MessageBubble from "./MessageBubble"
+import TypingIndicator from "./TypingIndicator"
 import { sendMessage } from "@/lib/api"
 import { v4 as uuidv4 } from "uuid"
 
@@ -11,12 +12,17 @@ type Props = {
 }
 
 export default function ChatWindow({ country }: Props) {
-
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState("")
   const [isTyping, setIsTyping] = useState(false)
 
   const [sessionId] = useState(uuidv4())
+
+  const bottomRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [messages, isTyping])
 
   const countryMap: Record<string, string> = {
     "Таиланд": "thailand",
@@ -27,6 +33,7 @@ export default function ChatWindow({ country }: Props) {
   }
 
   const handleSend = async () => {
+    if (!input.trim()) return
 
     const userMessage: Message = {
       role: "user",
@@ -34,33 +41,43 @@ export default function ChatWindow({ country }: Props) {
     }
 
     setMessages((prev) => [...prev, userMessage])
-    
     setInput("")
     setIsTyping(true)
 
     const backendCountry = countryMap[country] || country
 
-    const response = await sendMessage(input, sessionId, backendCountry)
+    try {
+      const response = await sendMessage(input, sessionId, backendCountry)
 
-    setIsTyping(false)
+      const botMessage: Message = {
+        role: "assistant",
+        content: response.answer
+      }
 
-    const botMessage: Message = {
-      role: "assistant",
-      content: response.answer
+      setMessages((prev) => [...prev, botMessage])
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "Ошибка при получении ответа. Попробуйте еще раз."
+        }
+      ])
+    } finally {
+      setIsTyping(false)
     }
-
-    setMessages((prev) => [...prev, botMessage])
-
-    setInput("")
   }
 
   return (
     <div className="border rounded-lg p-4">
-
       <div className="h-96 overflow-y-auto mb-4">
         {messages.map((m, i) => (
           <MessageBubble key={i} message={m} />
         ))}
+
+        {isTyping && <TypingIndicator />}
+
+        <div ref={bottomRef} />
       </div>
 
       <div className="flex gap-2">
@@ -69,6 +86,7 @@ export default function ChatWindow({ country }: Props) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Введите вопрос..."
+          onKeyDown={(e) => e.key === "Enter" && handleSend()}
         />
 
         <button

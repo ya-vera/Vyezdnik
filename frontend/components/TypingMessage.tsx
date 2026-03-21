@@ -1,29 +1,32 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import ReactMarkdown from "react-markdown"
 
 type Props = {
   text: string
   speed?: number
 }
 
-export default function TypingMessage({ text, speed = 20 }: Props) {
-  const [displayed, setDisplayed] = useState("")
+export default function TypingMessage({ text, speed = 10 }: Props) {
+  const [displayedText, setDisplayedText] = useState("")
 
   useEffect(() => {
-    let index = 0
+    let i = 0
 
     const interval = setInterval(() => {
-      setDisplayed(text.slice(0, index + 1))
-      index++
+      setDisplayedText(text.slice(0, i))
+      i++
 
-      if (index >= text.length) {
-        clearInterval(interval)
-      }
+      if (i > text.length) clearInterval(interval)
     }, speed)
 
     return () => clearInterval(interval)
   }, [text, speed])
 
-  return <span>{displayed}</span>
+  return (
+    <div className="prose prose-sm max-w-none">
+      <ReactMarkdown>{displayedText}</ReactMarkdown>
+    </div>
+  )
 }
