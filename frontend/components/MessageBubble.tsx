@@ -1,5 +1,7 @@
 import { Message } from "@/types/chat"
 import TypingMessage from "./TypingMessage"
+import ReactMarkdown from "react-markdown"
+
 
 export default function MessageBubble({ message }: { message: Message }) {
 
@@ -16,7 +18,11 @@ export default function MessageBubble({ message }: { message: Message }) {
         {isUser ? (
           message.content
         ) : (
-          <TypingMessage text={message.content} />
+          <div className="prose prose-sm max-w-none">
+          <ReactMarkdown>
+          {message.content}
+          </ReactMarkdown>
+          </div>
         )}
 
       </div>
