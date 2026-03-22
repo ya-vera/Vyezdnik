@@ -17,41 +17,72 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-URLS = [
-    {
-        "url": "https://www.kdmid.ru/docs/thailand/information-about-the-country",
-        "source_name": "МИД РФ — общая информация",
-        "country": "thailand"
+
+COUNTRIES_DATA = {
+    "thailand": {
+        "title": "Правила въезда в Таиланд для граждан РФ",
+        "category": "въезд, виза, TDAC, безвиз, документы",
+        "sources": [
+            {
+                "url": "https://www.kdmid.ru/docs/thailand/information-about-the-country",
+                "source_name": "МИД РФ — общая информация",
+            },
+            {
+                "url": "https://tdac.immigration.go.th/manual/en/index.html",
+                "source_name": "TDAC manual (обязательный цифровой arrival card)",
+            },
+            {
+                "url": "https://tdac.immigration.go.th/manual/en/faq.html",
+                "source_name": "TDAC FAQ",
+            },
+            {
+                "url": "https://www.immigration.go.th/en/?p=entry_requirements",
+                "source_name": "Immigration Thailand — Entry Requirements",
+            },
+            {
+                "url": "https://thaiconsulatela.thaiembassy.org/en/publicservice/visa-exemption-and-visa-on-arrival-to-thailand",
+                "source_name": "Visa Exemption & VOA — зеркало (актуальный список 93 стран)",
+            },
+            {
+                "url": "https://www.thaievisa.go.th/",
+                "source_name": "Thai e-Visa Official Portal",
+            },
+        ]
     },
-    {
-        "url": "https://tdac.immigration.go.th/manual/en/index.html",
-        "source_name": "TDAC manual (обязательный цифровой arrival card)",
-        "country": "thailand"
+
+    "vietnam": {
+        "title": "Правила въезда во Вьетнам для граждан РФ",
+        "category": "въезд, виза, e-visa, безвиз",
+        "sources": [
+            {
+                "url": "https://www.kdmid.ru/docs/vietnam/information-about-the-country",
+                "source_name": "МИД РФ — общая информация",
+            },
+            {
+                "url": "https://evisa.xuatnhapcanh.gov.vn/web/guest/khai-thi-thuc-dien-tu-cap-moi",
+                "source_name": "Vietnam e-Visa official portal",
+            },
+        ]
     },
-    {
-        "url": "https://tdac.immigration.go.th/manual/en/faq.html",
-        "source_name": "TDAC FAQ",
-        "country": "thailand"
+
+    "turkey": {
+        "title": "Правила въезда в Турцию для граждан РФ",
+        "category": "въезд, безвиз, страховка, миграционная карта",
+        "sources": [
+            {
+                "url": "https://www.kdmid.ru/docs/turkey/information-about-the-country",
+                "source_name": "МИД РФ — общая информация",
+            },
+            {
+                "url": "https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa",
+                "source_name": "MFA Turkey — Visa Information",
+            },
+        ]
     },
-    {
-        "url": "https://www.immigration.go.th/en/?p=entry_requirements",
-        "source_name": "Immigration Thailand — Entry Requirements",
-        "country": "thailand"
-    },
-    {
-        "url": "https://thaiconsulatela.thaiembassy.org/en/publicservice/visa-exemption-and-visa-on-arrival-to-thailand",
-        "source_name": "Visa Exemption & VOA — зеркало (актуальный список 93 стран)",
-        "country": "thailand"
-    },
-    {
-        "url": "https://www.thaievisa.go.th/",
-        "source_name": "Thai e-Visa Official Portal",
-        "country": "thailand"
-    },
-]
+}
+
 
 OUTPUT_DIR = Path("backend/data/knowledge")
-OUTPUT_FILE = OUTPUT_DIR / "thailand_all_sources.md"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
@@ -201,40 +232,57 @@ def fetch_page_text(url):
 
     return None
 
-def main():
+def main(countries=None):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write("# Правила въезда в Таиланд для граждан РФ (март 2026)\n")
-        f.write(f"last_updated: {datetime.now().strftime('%Y-%m-%d')}\n")
-        f.write("category: въезд, виза, TDAC, безвиз, документы\n\n")
+    if countries is None:
+        countries = list(COUNTRIES_DATA.keys())
 
-        f.write("АКТУАЛЬНО НА МАРТ 2026:\n")
+    for country_code in countries:
+        if country_code not in COUNTRIES_DATA:
+            print(f"Страна {country_code} не найдена в конфиге!")
+            continue
 
-        for item in URLS:
-            url = item["url"]
-            source = item["source_name"]
-            country = item["country"]
+        data = COUNTRIES_DATA[country_code]
+        title = data["title"]
+        category = data.get("category", "въезд, виза")
+        sources = data["sources"]
 
-            print(f"\nОбрабатываю: {source}")
-            print(url)
+        output_file = OUTPUT_DIR / f"{country_code}_all_sources.md"
 
-            text = fetch_page_text(url)
+        print(f"\n=== Обрабатываем страну: {country_code.upper()} ===")
+        print(f"Файл: {output_file.name}")
 
-            if text:
-                f.write(f"## Источник: {source}\n")
-                f.write(f"source_url: {url}\n")
-                f.write(f"country: {country}\n")
-                f.write(f"date_fetched: {datetime.now().strftime('%Y-%m-%d')}\n\n")
-                f.write(text + "\n\n")
-                f.write("═" * 100 + "\n\n")
-                print(f"  OK  ({len(text):,} символов)")
-            else:
-                print("  FAIL")
-                f.write(f"## {source} — НЕ УДАЛОСЬ ЗАГРУЗИТЬ (попробовать позже)\n")
-                f.write(f"source_url: {url}\n\n")
+        with open(output_file, "w", encoding="utf-8") as f:
+            # f.write(f"# {title} для граждан РФ (март 2026)\n")
+            # f.write(f"last_updated: {datetime.now().strftime('%Y-%m-%d')}\n")
+            # f.write(f"category: {category}\n\n")
 
-    print("\nГотово! Файл:", OUTPUT_FILE.absolute())
+            # f.write(f"АКТУАЛЬНО НА {datetime.now().strftime('%B %Y').upper()}:\n\n")
+
+            for item in sources:
+                url = item["url"]
+                source = item["source_name"]
+
+                print(f"\n  {source}")
+                print(f"  {url}")
+
+                text = fetch_page_text(url)
+
+                if text:
+                    f.write(f"## Источник: {source}\n")
+                    f.write(f"source_url: {url}\n")
+                    f.write(f"country: {country_code}\n")
+                    f.write(f"date_fetched: {datetime.now().strftime('%Y-%m-%d')}\n\n")
+                    f.write(text + "\n\n")
+                    f.write("═" * 100 + "\n\n")
+                    print(f"    OK  ({len(text):,} символов)")
+                else:
+                    print("    FAIL")
+                    f.write(f"## {source} — НЕ УДАЛОСЬ ЗАГРУЗИТЬ\n")
+                    f.write(f"source_url: {url}\n\n")
+
+        print(f"Готово для {country_code}: {output_file.absolute()}\n")
 
 if __name__ == "__main__":
     main()
