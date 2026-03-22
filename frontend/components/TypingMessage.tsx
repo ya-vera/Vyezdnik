@@ -2,13 +2,19 @@
 
 import { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
+import type { Components } from "react-markdown"
 
 type Props = {
   text: string
   speed?: number
+  markdownComponents?: Components
 }
 
-export default function TypingMessage({ text, speed = 10 }: Props) {
+export default function TypingMessage({
+  text,
+  speed = 10,
+  markdownComponents,
+}: Props) {
   const [displayedText, setDisplayedText] = useState("")
 
   useEffect(() => {
@@ -26,7 +32,7 @@ export default function TypingMessage({ text, speed = 10 }: Props) {
 
   return (
     <div className="prose prose-sm max-w-none">
-      <ReactMarkdown>{displayedText}</ReactMarkdown>
+      <ReactMarkdown components={markdownComponents}>{displayedText}</ReactMarkdown>
     </div>
   )
 }

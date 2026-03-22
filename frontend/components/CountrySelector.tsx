@@ -1,21 +1,15 @@
+import { COUNTRIES } from "@/lib/countries"
+
 type Props = {
-    onSelect: (country: string) => void
-  }
-  
-  const countries = [
-    { name: "Таиланд", flag: "🇹🇭" },
-    { name: "ОАЭ", flag: "🇦🇪" },
-    { name: "Турция", flag: "🇹🇷" },
-    { name: "Вьетнам", flag: "🇻🇳" },
-    { name: "Шри-Ланка", flag: "🇱🇰" }
-  ]
-  
-  export default function CountrySelector({ onSelect }: Props) {
+  onSelect: (country: string) => void
+}
+
+export default function CountrySelector({ onSelect }: Props) {
     return (
       <div className="grid grid-cols-2 gap-4 mb-6">
-        {countries.map((c) => (
+        {COUNTRIES.map((c) => (
           <button
-            key={c.name}
+            key={c.code}
             className="flex items-center gap-3 p-4 border rounded-xl bg-white shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-200"
             onClick={() => onSelect(c.name)}
           >

@@ -79,6 +79,36 @@ COUNTRIES_DATA = {
             },
         ]
     },
+
+    "uae": {
+        "title": "Правила въезда в ОАЭ для граждан РФ",
+        "category": "въезд, виза, транзит",
+        "sources": [
+            {
+                "url": "https://www.kdmid.ru/docs/united-arab-emirates/information-about-the-country",
+                "source_name": "МИД РФ — общая информация",
+            },
+            {
+                "url": "https://www.mofa.gov.ae/en/missions/moscow",
+                "source_name": "Посольство ОАЭ в Москве (справочно)",
+            },
+        ]
+    },
+
+    "srilanka": {
+        "title": "Правила въезда на Шри-Ланку для граждан РФ",
+        "category": "въезд, виза, ETA",
+        "sources": [
+            {
+                "url": "https://www.kdmid.ru/docs/sri-lanka/information-about-the-country",
+                "source_name": "МИД РФ — общая информация",
+            },
+            {
+                "url": "https://www.eta.gov.lk/slvisa/",
+                "source_name": "ETA Sri Lanka (справочно)",
+            },
+        ]
+    },
 }
 
 

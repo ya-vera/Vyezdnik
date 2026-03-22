@@ -1,11 +1,20 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useMemo } from "react"
+import type { Components } from "react-markdown"
 import { Message } from "@/types/chat"
 import MessageBubble from "./MessageBubble"
 import TypingIndicator from "./TypingIndicator"
-import { sendMessage } from "@/lib/api"
+import { sendMessage, sendAnalyticsEvent } from "@/lib/api"
+import { countryCodeFromUiName } from "@/lib/countries"
 import { v4 as uuidv4 } from "uuid"
+
+function isFormDownloadLink(text: string, href: string) {
+  const s = `${text} ${href}`.toLowerCase()
+  return /скачать|download|анкет|форма|form|pdf|заполн|manual|faq|tdac|evisa/i.test(
+    s
+  )
+}
 
 type Props = {
   country: string
@@ -24,13 +33,35 @@ export default function ChatWindow({ country }: Props) {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages, isTyping])
 
-  const countryMap: Record<string, string> = {
-    "Таиланд": "thailand",
-    "ОАЭ": "uae",
-    "Турция": "turkey",
-    "Вьетнам": "vietnam",
-    "Шри-Ланка": "srilanka"
-  }
+  const backendCountry = countryCodeFromUiName(country)
+
+  const markdownComponents = useMemo<Components>(
+    () => ({
+      a: ({ href, children }) => (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 underline"
+          onClick={() => {
+            const text = String(children)
+            if (href && isFormDownloadLink(text, href)) {
+              sendAnalyticsEvent({
+                event_type: "form_download_click",
+                country_code: backendCountry,
+                country_label: country,
+                link_url: href,
+                link_text: text,
+              })
+            }
+          }}
+        >
+          {children}
+        </a>
+      ),
+    }),
+    [backendCountry, country]
+  )
 
   const handleSend = async () => {
     if (!input.trim()) return
@@ -44,8 +75,6 @@ export default function ChatWindow({ country }: Props) {
     setInput("")
     setIsTyping(true)
 
-    const backendCountry = countryMap[country] || country
-
     try {
       const response = await sendMessage(input, sessionId, backendCountry)
 
@@ -56,12 +85,16 @@ export default function ChatWindow({ country }: Props) {
 
       setMessages((prev) => [...prev, botMessage])
     } catch (error) {
+      const msg =
+        error instanceof Error && error.message
+          ? error.message
+          : "Критическая ошибка: сервис ответа недоступен. Сообщите администратору."
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content: "Ошибка при получении ответа. Попробуйте еще раз."
-        }
+          content: msg,
+        },
       ])
     } finally {
       setIsTyping(false)
@@ -72,7 +105,11 @@ export default function ChatWindow({ country }: Props) {
     <div className="border rounded-lg p-4">
       <div className="h-96 overflow-y-auto mb-4">
         {messages.map((m, i) => (
-          <MessageBubble key={i} message={m} />
+          <MessageBubble
+            key={i}
+            message={m}
+            markdownComponents={markdownComponents}
+          />
         ))}
 
         {isTyping && <TypingIndicator />}

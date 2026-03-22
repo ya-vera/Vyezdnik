@@ -1,7 +1,13 @@
+import type { Components } from "react-markdown"
 import { Message } from "@/types/chat"
 import TypingMessage from "./TypingMessage"
 
-export default function MessageBubble({ message }: { message: Message }) {
+type Props = {
+  message: Message
+  markdownComponents?: Components
+}
+
+export default function MessageBubble({ message, markdownComponents }: Props) {
   const isUser = message.role === "user"
 
   return (
@@ -14,7 +20,10 @@ export default function MessageBubble({ message }: { message: Message }) {
         {isUser ? (
           message.content
         ) : (
-          <TypingMessage text={message.content} />
+          <TypingMessage
+            text={message.content}
+            markdownComponents={markdownComponents}
+          />
         )}
       </div>
     </div>

@@ -8,13 +8,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-METADATA_PATH = Path("backend/data/metadata/countries.json")
+METADATA_PATH = Path(__file__).resolve().parent.parent / "data" / "metadata" / "countries.json"
 
 llm = ChatOpenAI(
     model="mistral-large-latest",
     api_key=os.getenv("MISTRAL_API_KEY"),
     base_url="https://api.mistral.ai/v1",
-    temperature=0.0, # Оставляем 0 для максимальной строгости
+    temperature=0.0,
 )
 
 FORM_PROMPT = ChatPromptTemplate.from_messages([
@@ -39,7 +39,7 @@ FORM_PROMPT = ChatPromptTemplate.from_messages([
     ЗАПРОС ПОЛЬЗОВАТЕЛЯ: "{{user_request}}"
     
     Твой ответ:""")
-], template_format="jinja2") # Используем jinja2, чтобы избежать проблем с фигурными скобками в JSON
+], template_format="jinja2") 
 
 chain = FORM_PROMPT | llm | StrOutputParser()
 
@@ -58,7 +58,6 @@ def form_agent(country_query: str, user_request: str):
     if not country_data:
         return f"К сожалению, в моей базе пока нет информации о формах для страны: {country_query}."
 
-    # Отправляем данные на проверку
     response = chain.invoke({
         "country_name": country_data.get("name", country_query),
         "forms_data": json.dumps(country_data.get("forms", []), indent=2, ensure_ascii=False),

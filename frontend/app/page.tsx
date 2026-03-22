@@ -3,9 +3,20 @@
 import { useState } from "react"
 import CountrySelector from "@/components/CountrySelector"
 import ChatWindow from "@/components/ChatWindow"
+import { sendAnalyticsEvent } from "@/lib/api"
+import { countryCodeFromUiName } from "@/lib/countries"
 
 export default function Home() {
   const [country, setCountry] = useState<string | null>(null)
+
+  const onSelectCountry = (name: string) => {
+    sendAnalyticsEvent({
+      event_type: "country_select",
+      country_label: name,
+      country_code: countryCodeFromUiName(name),
+    })
+    setCountry(name)
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-100 flex items-center justify-center p-8">
@@ -22,7 +33,7 @@ export default function Home() {
             <h2 className="mb-4 font-semibold">
               Выберите страну
             </h2>
-            <CountrySelector onSelect={setCountry} />
+            <CountrySelector onSelect={onSelectCountry} />
           </>
         )}
 

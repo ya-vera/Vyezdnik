@@ -9,90 +9,68 @@ services:
     restart: unless-stopped
     stop_grace_period: 30s
     init: true
+    networks:
+      - vyezdnik-net
 
   backend:
     build: ./backend
     container_name: vyezdnik-backend
-    network_mode: host
-    #ports:
-      #- "8000:8000"
+    ports:
+      - "8000:8000"
     environment:
-      - HF_HUB_OFFLINE=1
       - MISTRAL_API_KEY=${MISTRAL_API_KEY}
-      - QDRANT_URL=http://localhost:6333
+      - QDRANT_URL=http://qdrant:6333
     volumes:
       - ./backend:/app
-      - /home/user/.cache/huggingface:/root/.cache/huggingface
+      - hf_cache:/root/.cache/huggingface
     depends_on:
       - qdrant
     restart: unless-stopped
     stop_grace_period: 30s
     init: true
+    networks:
+      - vyezdnik-net
+
+  prometheus:
+    image: prom/prometheus:v2.53.1
+    container_name: vyezdnik-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.retention.time=15d
+    depends_on:
+      - backend
+    restart: unless-stopped
+    stop_grace_period: 30s
+    networks:
+      - vyezdnik-net
 
   frontend:
     build: ./frontend
     container_name: vyezdnik-frontend
-    network_mode: host
-    #ports:
-     # - "3000:3000"
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
     volumes:
       - ./frontend:/app
-      - /app/node_modules
+      - frontend_node_modules:/app/node_modules
     depends_on:
       - backend
     restart: unless-stopped
     stop_grace_period: 30s
     init: true
+    networks:
+      - vyezdnik-net
+
+networks:
+  vyezdnik-net:
+    driver: bridge
 
 volumes:
   qdrant_storage:
-
-# Если с конфигурацией выше траблы, то пробуйте ниже
-#services:
- # qdrant:
-  #  image: qdrant/qdrant:v1.17.0
-   # container_name: vyezdnik-qdrant
-    #ports:
-     # - "6333:6333"
-    #volumes:
-     # - qdrant_storage:/qdrant/storage
-    #restart: unless-stopped
-    #networks:
-     # - vyezdnik-net
-
-  #backend:
-   # build: ./backend
-    #container_name: vyezdnik-backend
-    #ports:
-     # - "8000:8000"
-    #environment:
-     # - MISTRAL_API_KEY=${MISTRAL_API_KEY}
-     # - QDRANT_URL=http://qdrant:6333
-    #volumes:
-     # - ./backend:/app
-    #depends_on:
-     # - qdrant
-    #restart: unless-stopped
-    #networks:
-     # - vyezdnik-net
-    #dns:
-     # - 8.8.8.8
-     # - 1.1.1.1
-
-  #frontend:
-   # build: ./frontend
-    #container_name: vyezdnik-frontend
-    #ports:
-     # - "3000:3000"
-    #volumes:
-     # - ./frontend:/app
-     # - /app/node_modules
-    #depends_on:
-     # - backend
-    #restart: unless-stopped
-    #networks:
-     # - vyezdnik-net
-
-#networks:
- # vyezdnik-net:
-  #  driver: bridge
+  hf_cache:
+  frontend_node_modules:

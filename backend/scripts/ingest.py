@@ -10,44 +10,57 @@ import uuid
 import time
 from tqdm import tqdm
 
+load_dotenv()
 
 QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
-COLLECTION_NAME = "thailand_rules"
-EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-large" 
-
-INPUT_FILE = Path(r"backend/data/knowledge/thailand_all_sources.md")
-CHUNK_SIZE = 960
+EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-large"  # dim 1024
+CHUNK_SIZE    = 960
 CHUNK_OVERLAP = 160
 
-client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+KNOWLEDGE_DIR = Path("backend/data/knowledge")
+
+client   = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+embedder = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
 
-def create_collection_if_not_exists():
-    try:
-        client.delete_collection(COLLECTION_NAME)
-        print(f"Удалена старая коллекция: {COLLECTION_NAME}")
-        time.sleep(1.5)
-    except Exception as e:
-        print(f"Коллекция не найдена или ошибка удаления (нормально): {e}")
+def get_country_from_filename(filename: str) -> str:
+    stem = Path(filename).stem
+    if "_all_sources" in stem:
+        return stem.replace("_all_sources", "")
+    return "unknown"
 
-    client.create_collection(
-        collection_name=COLLECTION_NAME,
-        vectors_config=VectorParams(size=1024, distance=Distance.COSINE)
-    )
-    print(f"Создана новая коллекция: {COLLECTION_NAME}")
+
+def create_or_reset_collection(collection_name: str, recreate: bool = False):
+    exists = client.collection_exists(collection_name)
+
+    if recreate and exists:
+        client.delete_collection(collection_name)
+        print(f" → Удалена коллекция: {collection_name}")
+        time.sleep(1.2)
+        exists = False
+
+    if not exists:
+        client.create_collection(
+            collection_name=collection_name,
+            vectors_config=VectorParams(size=1024, distance=Distance.COSINE)
+        )
+        print(f" → Создана коллекция: {collection_name}")
+    else:
+        print(f" → Используется существующая коллекция: {collection_name}")
 
 
 def split_by_sources(md_path: Path):
     if not md_path.exists():
-        raise FileNotFoundError(f"Файл не найден: {md_path}")
+        print(f"Файл не найден → пропуск: {md_path}")
+        return []
 
     with open(md_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    first_real_source_pos = content.find('## Источник:')
-    if first_real_source_pos != -1:
-        content = content[first_real_source_pos:]
+    first_source_pos = content.find('## Источник:')
+    if first_source_pos != -1:
+        content = content[first_source_pos:]
 
     sections = re.split(r'(?=^## Источник:)', content, flags=re.MULTILINE)
 
@@ -65,28 +78,29 @@ def split_by_sources(md_path: Path):
             r'(?:country:\s*(.+?)\n)?'
             r'(?:date_fetched:\s*(.+?)\n)?',
             section,
-            flags=re.MULTILINE
+            flags=re.MULTILINE | re.DOTALL
         )
 
         if header_match:
-            source_name = header_match.group(1).strip()
-            source_url = header_match.group(2).strip()
+            source_name  = header_match.group(1).strip()
+            source_url   = header_match.group(2).strip()
+            country      = header_match.group(3).strip() if header_match.group(3) else None
+            date_fetched = header_match.group(4).strip() if header_match.group(4) else datetime.now().strftime("%Y-%m-%d")
 
             current_meta = {
                 "source_name": source_name,
                 "source_url": source_url,
-                "country": header_match.group(3).strip() if header_match.group(3) else "thailand",
-                "date_fetched": header_match.group(4).strip() if header_match.group(4) else datetime.now().strftime("%Y-%m-%d"),
+                "country": country or get_country_from_filename(md_path.name),
+                "date_fetched": date_fetched,
+                "file": md_path.name,
             }
 
             text_part = re.sub(
-                r'^## Источник:.*?\nsource_url:.*?(?:\ncountry:.*?\n)?(?:date_fetched:.*?\n)?\n*',
-                '',
-                section,
-                flags=re.DOTALL | re.MULTILINE
+                r'^## Источник:.*?(?:\ncountry:.*?\n)?(?:date_fetched:.*?\n)?\n*',
+                '', section, flags=re.DOTALL | re.MULTILINE
             ).strip()
         else:
-            text_part = section
+            text_part = section.strip()
 
         if not text_part:
             continue
@@ -96,72 +110,84 @@ def split_by_sources(md_path: Path):
             end = min(start + CHUNK_SIZE, len(text_part))
             chunk_text = text_part[start:end].strip()
 
-            if not chunk_text:
+            if len(chunk_text) < 80:
                 start += CHUNK_SIZE - CHUNK_OVERLAP
                 continue
 
-            chunk_item = {
+            payload = {
                 "text": chunk_text,
-                "metadata": current_meta.copy()
+                **current_meta
             }
 
-            source_url = current_meta.get("source_url", "").strip()
-            source_name = current_meta.get("source_name", "").strip()
-
-            if not source_url or not source_name:
-                print(f"Пропущен чанк без источника: {chunk_text[:100]}...")
-                start += CHUNK_SIZE - CHUNK_OVERLAP
-                continue
-
-            all_chunks.append(chunk_item)
+            all_chunks.append({
+                "payload": payload,
+                "text_for_embedding": chunk_text
+            })
 
             start += CHUNK_SIZE - CHUNK_OVERLAP
 
-    print(f"Всего валидных чанков после фильтра: {len(all_chunks)}")
+    print(f" → Извлечено чанков: {len(all_chunks):,} из {md_path.name}")
     return all_chunks
 
 
-def embed_and_upload(chunks_with_meta, embedder, batch_size=32, limit=None):
-    if limit is not None:
-        chunks_with_meta = chunks_with_meta[:limit]
-
-    texts = [item["text"] for item in chunks_with_meta]
-
-    for i in tqdm(range(0, len(texts), batch_size), desc="Processing batches"):
-        batch_texts = texts[i:i+batch_size]
-        vectors = embedder.encode(batch_texts, show_progress_bar=False)
-        
-        points = []
-        for j, item_idx in enumerate(range(i, i + len(batch_texts))):
-            item = chunks_with_meta[item_idx]
-            payload = {
-                "text": item["text"],
-                **item["metadata"]
-            }
-            points.append(PointStruct(
-                id=str(uuid.uuid4()),
-                vector=vectors[j].tolist(),
-                payload=payload
-            ))
-
-        client.upsert(collection_name=COLLECTION_NAME, points=points)
-
-
-def main():
-    print(f"[{datetime.now()}] Обработка файла: {INPUT_FILE}")
-
-    create_collection_if_not_exists()
-
-    chunks_with_meta = split_by_sources(INPUT_FILE)
-    print(f"[{datetime.now()}] Получено {len(chunks_with_meta)} чанков с метаданными")
-
-    if not chunks_with_meta:
-        print("Не удалось извлечь чанки — проверьте формат markdown")
+def upload_chunks(chunks, collection_name, batch_size=48):
+    if not chunks:
         return
 
-    embedder = SentenceTransformer(EMBEDDING_MODEL_NAME)
-    embed_and_upload(chunks_with_meta, embedder)
-    print(f"[{datetime.now()}] Работа завершена!")
+    texts = [c["text_for_embedding"] for c in chunks]
+
+    for i in tqdm(range(0, len(texts), batch_size), desc=f"Загрузка в {collection_name}"):
+        batch_texts = texts[i:i + batch_size]
+        batch_items = chunks[i:i + batch_size]
+
+        vectors = embedder.encode(
+            batch_texts,
+            normalize_embeddings=True,
+            show_progress_bar=False
+        )
+
+        points = []
+        for j, item in enumerate(batch_items):
+            point_id = str(uuid.uuid4())
+            points.append(PointStruct(
+                id=point_id,
+                vector=vectors[j].tolist(),
+                payload=item["payload"]
+            ))
+
+        client.upsert(
+            collection_name=collection_name,
+            points=points,
+            wait=True
+        )
+
+
+def main(countries=None, recreate_collections=False):
+    if countries is None:
+        md_files = list(KNOWLEDGE_DIR.glob("*_all_sources.md"))
+    else:
+        md_files = [KNOWLEDGE_DIR / f"{c}_all_sources.md" for c in countries]
+        md_files = [f for f in md_files if f.exists()]
+
+    if not md_files:
+        print("Не найдено ни одного файла *_all_sources.md")
+        return
+
+    print(f"Обнаружено файлов для обработки: {len(md_files)}")
+
+    for md_path in md_files:
+        country = get_country_from_filename(md_path.name)
+        collection_name = f"travel_rules_{country}"
+
+        print(f"\n{'═'*60}\nОбрабатываем страну: {country.upper()} → коллекция: {collection_name}")
+
+        create_or_reset_collection(collection_name, recreate=recreate_collections)
+
+        chunks = split_by_sources(md_path)
+        if not chunks:
+            continue
+
+        upload_chunks(chunks, collection_name)
 
 
 if __name__ == "__main__":

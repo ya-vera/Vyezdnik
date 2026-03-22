@@ -1,4 +1,5 @@
 from qdrant_client import QdrantClient
+from qdrant_client.http.models import Filter, FieldCondition, MatchValue
 from sentence_transformers import SentenceTransformer
 
 client = QdrantClient(host="localhost", port=6333)
@@ -11,10 +12,13 @@ print(f"Запрос: {query_text}")
 print(f"Размер вектора: {len(query_vector)} (должен быть 1024)\n")
 
 hits = client.query_points(
-    collection_name="thailand_rules",
+    collection_name="travel_rules_thailand",
     query=query_vector,
-    limit=5,         
+    limit=5,
     with_payload=True,
+    query_filter=Filter(
+        must=[FieldCondition(key="country", match=MatchValue(value="thailand"))]
+    ),
 )
 
 print("Найденные чанки (score > 0.7):")

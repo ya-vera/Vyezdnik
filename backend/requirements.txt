@@ -14,3 +14,4 @@ webdriver-manager>=4.0.0
 urllib3>=2.2.0
 tqdm
 qdrant-client==1.17.1
+prometheus-fastapi-instrumentator>=7.0.0
