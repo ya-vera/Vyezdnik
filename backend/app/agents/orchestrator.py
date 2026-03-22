@@ -11,14 +11,14 @@ def orchestrator(question: str, country: str = "thailand"):
     responses = []
     
     if intent in ["LAW", "BOTH"]:
-        lawyer_response = lawyer_agent(question)
+        lawyer_response = lawyer_agent(question, country)
         responses.append(lawyer_response)
     
     if intent in ["FORM", "BOTH"]:
         form_response = form_agent(country, question)
     
         if "нет информации" in form_response.lower():
-            lawyer_response = lawyer_agent(question)
+            lawyer_response = lawyer_agent(question, country)
             return lawyer_response
         
         responses.append(form_response)
