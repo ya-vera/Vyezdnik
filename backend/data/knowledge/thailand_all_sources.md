@@ -1,12 +1,12 @@
 # Правила въезда в Таиланд для граждан РФ (март 2026)
-last_updated: 2026-03-17
+last_updated: 2026-03-22
 category: въезд, виза, TDAC, безвиз, документы
 
 АКТУАЛЬНО НА МАРТ 2026:
 ## Источник: МИД РФ — общая информация
 source_url: https://www.kdmid.ru/docs/thailand/information-about-the-country
 country: thailand
-date_fetched: 2026-03-17
+date_fetched: 2026-03-22
 
 Консульский информационный портал
 
@@ -1111,7 +1111,7 @@ date_fetched: 2026-03-17
 ## Источник: TDAC manual (обязательный цифровой arrival card)
 source_url: https://tdac.immigration.go.th/manual/en/index.html
 country: thailand
-date_fetched: 2026-03-17
+date_fetched: 2026-03-22
 
 TDAC Thailand Digital Arrival Card Welcome to Guide
 
@@ -1913,7 +1913,7 @@ UPDATING TDA​C
 ## Источник: TDAC FAQ
 source_url: https://tdac.immigration.go.th/manual/en/faq.html
 country: thailand
-date_fetched: 2026-03-17
+date_fetched: 2026-03-22
 
 TDAC Thailand Digital Arrival Card Welcome to Guide
 
@@ -3132,60 +3132,17 @@ Update Arrival Card
 
 ════════════════════════════════════════════════════════════════════════════════════════════════════
 
-## Источник: Immigration Thailand — Entry Requirements
+## Immigration Thailand — Entry Requirements — НЕ УДАЛОСЬ ЗАГРУЗИТЬ (попробовать позже)
 source_url: https://www.immigration.go.th/en/?p=entry_requirements
-country: thailand
-date_fetched: 2026-03-17
-
-www.immigration.go.th Выполнение проверки безопасности Этот веб-сайт использует службу безопасности для защиты от вредоносных ботов. Эта страница отображается, пока веб-сайт проверяет, что вы не бот. Проверка выполнена успешно. Ожидание ответа www.immigration.go.th
-
-www.immigration.go.th Выполнение проверки безопасности Этот веб-сайт использует службу безопасности для защиты от вредоносных ботов. Эта страница отображается, пока веб-сайт проверяет, что вы не бот. Проверка выполнена успешно. Ожидание ответа www.immigration.go.th
-
-www.immigration.go.th
-
-
-WWW.IMMIGRATION.GO.TH
----------------------
-
-
-
-ВЫПОЛНЕНИЕ ПРОВЕРКИ БЕЗОПАСНОСТИ
---------------------------------
-
-
-Этот веб-сайт использует службу безопасности для защиты от вредоносных ботов. Эта страница отображается, пока веб-сайт проверяет, что вы не бот.
-
-Проверка выполнена успешно. Ожидание ответа www.immigration.go.th
-
-
-ПРОВЕРКА ВЫПОЛНЕНА УСПЕШНО. ОЖИДАНИЕ ОТВЕТА WWW.IMMIGRATION.GO.TH
------------------------------------------------------------------
-
-
-Ray ID: 9ddacbbe68af6600 Производительность и безопасность с Cloudflare Конфиденциальность
-
-Ray ID: 9ddacbbe68af6600 Производительность и безопасность с Cloudflare Конфиденциальность
-
-Ray ID: 9ddacbbe68af6600 Производительность и безопасность с Cloudflare Конфиденциальность
-
-Ray ID: 9ddacbbe68af6600
-
-Ray ID: 9ddacbbe68af6600
-
-Производительность и безопасность с Cloudflare Конфиденциальность
-
-Производительность и безопасность с Cloudflare
-
-════════════════════════════════════════════════════════════════════════════════════════════════════
 
 ## Источник: Visa Exemption & VOA — зеркало (актуальный список 93 стран)
 source_url: https://thaiconsulatela.thaiembassy.org/en/publicservice/visa-exemption-and-visa-on-arrival-to-thailand
 country: thailand
-date_fetched: 2026-03-17
+date_fetched: 2026-03-22
 
-Home Services for Thais Thai Passport Thai ID Card Legalization Protection for Thais Mobile Consular Visa Visa information Visa Types & Requirements Visa Exemption and Visa on Arrival to Thailand Frequently Ask Questions (FAQ) for VISA Apply for Visa Online Visting Thailand Thailand in brief Thailand and the US New & Events Press Release Consulate's Events Procurement Notices About Consulate Consul-General Consuls Consulate's History Contact Us Address and Service Hours Jurisdiction Consulate's Holiday Contact Information Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF) TOP Royal Thai Consulate-General, Los Angeles สถานกงสุลใหญ่ ณ นครลอสแอนเจลิส Address : 611 North Larchmont Blvd., 2nd Floor, Los Angeles CA 90004 Office Hours : Monday - Friday, Time: 09.00 - 16.00 (323) 962-9574 (323) 962-2128 [email protected] Subscribe Follow us: Subscribe
+Home Services for Thais Thai Passport Thai ID Card Legalization Protection for Thais Mobile Consular Visa Visa information Visa Types & Requirements Visa Exemption and Visa on Arrival to Thailand Frequently Ask Questions (FAQ) for VISA Apply for Visa Online Visting Thailand Thailand in brief Thailand and the US New & Events Press Release Consulate's Events Procurement Notices About Consulate Consul-General Consuls Consulate's History Contact Us Address and Service Hours Jurisdiction Consulate's Holiday Contact Information Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF) TOP Royal Thai Consulate-General, Los Angeles สถานกงสุลใหญ่ ณ นครลอสแอนเจลิส Address : 611 North Larchmont Blvd., 2nd Floor, Los Angeles CA 90004 Office Hours : Monday - Friday, Time: 09.00 - 16.00 (323) 962-9574 (323) 962-2128 [email protected] Subscribe Follow us: Subscribe
 
-Home Services for Thais Thai Passport Thai ID Card Legalization Protection for Thais Mobile Consular Visa Visa information Visa Types & Requirements Visa Exemption and Visa on Arrival to Thailand Frequently Ask Questions (FAQ) for VISA Apply for Visa Online Visting Thailand Thailand in brief Thailand and the US New & Events Press Release Consulate's Events Procurement Notices About Consulate Consul-General Consuls Consulate's History Contact Us Address and Service Hours Jurisdiction Consulate's Holiday Contact Information Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF) TOP Royal Thai Consulate-General, Los Angeles สถานกงสุลใหญ่ ณ นครลอสแอนเจลิส Address : 611 North Larchmont Blvd., 2nd Floor, Los Angeles CA 90004 Office Hours : Monday - Friday, Time: 09.00 - 16.00 (323) 962-9574 (323) 962-2128 [email protected] Subscribe Follow us: Subscribe
+Home Services for Thais Thai Passport Thai ID Card Legalization Protection for Thais Mobile Consular Visa Visa information Visa Types & Requirements Visa Exemption and Visa on Arrival to Thailand Frequently Ask Questions (FAQ) for VISA Apply for Visa Online Visting Thailand Thailand in brief Thailand and the US New & Events Press Release Consulate's Events Procurement Notices About Consulate Consul-General Consuls Consulate's History Contact Us Address and Service Hours Jurisdiction Consulate's Holiday Contact Information Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF) TOP Royal Thai Consulate-General, Los Angeles สถานกงสุลใหญ่ ณ นครลอสแอนเจลิส Address : 611 North Larchmont Blvd., 2nd Floor, Los Angeles CA 90004 Office Hours : Monday - Friday, Time: 09.00 - 16.00 (323) 962-9574 (323) 962-2128 [email protected] Subscribe Follow us: Subscribe
 
 Home Services for Thais Thai Passport Thai ID Card Legalization Protection for Thais Mobile Consular Visa Visa information Visa Types & Requirements Visa Exemption and Visa on Arrival to Thailand Frequently Ask Questions (FAQ) for VISA Apply for Visa Online Visting Thailand Thailand in brief Thailand and the US New & Events Press Release Consulate's Events Procurement Notices About Consulate Consul-General Consuls Consulate's History Contact Us Address and Service Hours Jurisdiction Consulate's Holiday Contact Information
 
@@ -3285,17 +3242,17 @@ Consulate's Holiday
 
 Contact Information
 
-Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
+Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
 
-Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
+Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
 
-Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
+Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
 
-Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
+Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
 
-Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
+Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
 
-Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
+Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown New Tourist Visa Exemption Scheme (60 Days) Effective Date 15 July 2024 Nationals of the following 93 countries and territories are entitled to visa exemption for the purpose of tourism business engagements or urgent work or ad-hoc work, for up to 60 days period of stay and can be extended for another period not exceeding 30 days. Extension of stay is solely at the discretion of the immigration officer. Before the maximum stay of 90 days are eligible to apply for a new type of visa in Thailand. New Visa on Arrival (VoA) Effective Date 15 July 2024 Nationals of the following 31 countries and territories may apply for visa on arrival at the immigration checkpoints on arrival for tourism purpose. New Visa on Arrival (PDF)
 
 Visa Exemption and Visa on Arrival to Thailand Visa Exemption and Visa on Arrival to Thailand
 
@@ -3309,9 +3266,9 @@ VISA EXEMPTION AND VISA ON ARRIVAL TO THAILAND
 ----------------------------------------------
 
 
-วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view Toggle Dropdown
+วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view Toggle Dropdown
 
-วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,102,955 view
+วันที่นำเข้าข้อมูล 30 Nov 2023 วันที่ปรับปรุงข้อมูล 25 Jul 2024 | 1,106,801 view
 
 วันที่นำเข้าข้อมูล 30 Nov 2023
 
@@ -3321,9 +3278,9 @@ VISA EXEMPTION AND VISA ON ARRIVAL TO THAILAND
 
 วันที่ปรับปรุงข้อมูล 25 Jul 2024
 
-| 1,102,955 view
+| 1,106,801 view
 
-1,102,955 view
+1,106,801 view
 
 Toggle Dropdown
 
@@ -3409,393 +3366,6 @@ Subscribe
 
 ════════════════════════════════════════════════════════════════════════════════════════════════════
 
-## Источник: Thai e-Visa Official Portal
+## Thai e-Visa Official Portal — НЕ УДАЛОСЬ ЗАГРУЗИТЬ (попробовать позже)
 source_url: https://www.thaievisa.go.th/
-country: thailand
-date_fetched: 2026-03-17
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand English User Manual Sign in Create an account THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand How to apply online 1 Create an account 2 Fill in an application form 3 Upload supporting documents 4 Pay visa fee 5 Wait for the visa to be processed 6 e-Visa confirmation document sent by email Frequently Asked Questions Do I need a tourist visa ? Visa Category Diplomatic & Official Visas Diplomatic or official mission Tourist Visas Tourism, MICE, Medical treatment Transit Visas Transit, sport activities, or crew Work & Business Visas Employment or Business Studying Visas Study visit and training Media & Film Crew Visas Media and film crew Religious Activities Visas Religions activities Research & Science Visas Research or science Staying with Family Visas Retirement Courtesy Visas Medical Treatment Smart Visas Talent, Investor, Executive, Startup Long-Term Resident Visas 10 years visa for long term residents Destination Thailand Visa (DTV) Workcation and Thai soft power related activities Thailand Privilege Card Long term visa with more privileges Other Visas *All applications are subject to approval and the Royal Thai Embassy or Consulate-General may request for an interview or additional documents. Submission of a visa application does not necessarily mean that a visa will be granted. Please also note that the visa fees are non-refundable. MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry ©2020 Ministry of Foreign Affairs of Thailand. All Rights Reserved. Version 12F.02.07 (Images in this website is copyrighted of the Tourism Authority of Thailand)
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand English User Manual Sign in Create an account THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand How to apply online 1 Create an account 2 Fill in an application form 3 Upload supporting documents 4 Pay visa fee 5 Wait for the visa to be processed 6 e-Visa confirmation document sent by email Frequently Asked Questions Do I need a tourist visa ? Visa Category Diplomatic & Official Visas Diplomatic or official mission Tourist Visas Tourism, MICE, Medical treatment Transit Visas Transit, sport activities, or crew Work & Business Visas Employment or Business Studying Visas Study visit and training Media & Film Crew Visas Media and film crew Religious Activities Visas Religions activities Research & Science Visas Research or science Staying with Family Visas Retirement Courtesy Visas Medical Treatment Smart Visas Talent, Investor, Executive, Startup Long-Term Resident Visas 10 years visa for long term residents Destination Thailand Visa (DTV) Workcation and Thai soft power related activities Thailand Privilege Card Long term visa with more privileges Other Visas *All applications are subject to approval and the Royal Thai Embassy or Consulate-General may request for an interview or additional documents. Submission of a visa application does not necessarily mean that a visa will be granted. Please also note that the visa fees are non-refundable. MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry ©2020 Ministry of Foreign Affairs of Thailand. All Rights Reserved. Version 12F.02.07 (Images in this website is copyrighted of the Tourism Authority of Thailand)
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand English User Manual Sign in Create an account
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand English User Manual Sign in Create an account
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand
-
-THAI E-VISA OFFICIAL WEBSITE
-
-OFFICIAL WEBSITE
-
-Ministry of Foreign Affairs of the Kingdom of Thailand
-
-English User Manual Sign in Create an account
-
-English
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand How to apply online 1 Create an account 2 Fill in an application form 3 Upload supporting documents 4 Pay visa fee 5 Wait for the visa to be processed 6 e-Visa confirmation document sent by email Frequently Asked Questions Do I need a tourist visa ? Visa Category Diplomatic & Official Visas Diplomatic or official mission Tourist Visas Tourism, MICE, Medical treatment Transit Visas Transit, sport activities, or crew Work & Business Visas Employment or Business Studying Visas Study visit and training Media & Film Crew Visas Media and film crew Religious Activities Visas Religions activities Research & Science Visas Research or science Staying with Family Visas Retirement Courtesy Visas Medical Treatment Smart Visas Talent, Investor, Executive, Startup Long-Term Resident Visas 10 years visa for long term residents Destination Thailand Visa (DTV) Workcation and Thai soft power related activities Thailand Privilege Card Long term visa with more privileges Other Visas *All applications are subject to approval and the Royal Thai Embassy or Consulate-General may request for an interview or additional documents. Submission of a visa application does not necessarily mean that a visa will be granted. Please also note that the visa fees are non-refundable. MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry ©2020 Ministry of Foreign Affairs of Thailand. All Rights Reserved. Version 12F.02.07 (Images in this website is copyrighted of the Tourism Authority of Thailand)
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand
-
-THAI E-VISA OFFICIAL WEBSITE Ministry of Foreign Affairs of the Kingdom of Thailand
-
-
-THAI E-VISA OFFICIAL WEBSITE
-----------------------------
-
-
-Ministry of Foreign Affairs of the Kingdom of Thailand
-
-Ministry of Foreign Affairs of the Kingdom of Thailand
-
-How to apply online 1 Create an account 2 Fill in an application form 3 Upload supporting documents 4 Pay visa fee 5 Wait for the visa to be processed 6 e-Visa confirmation document sent by email
-
-How to apply online 1 Create an account 2 Fill in an application form 3 Upload supporting documents 4 Pay visa fee 5 Wait for the visa to be processed 6 e-Visa confirmation document sent by email
-
-
-HOW TO APPLY ONLINE
--------------------
-
-
-1 Create an account 2 Fill in an application form 3 Upload supporting documents 4 Pay visa fee 5 Wait for the visa to be processed 6 e-Visa confirmation document sent by email
-
-1 Create an account 2 Fill in an application form 3 Upload supporting documents 4 Pay visa fee 5 Wait for the visa to be processed 6 e-Visa confirmation document sent by email
-
-1 Create an account
-
-Create an account
-
-Create an account
-
-2 Fill in an application form
-
-Fill in an application form
-
-Fill in an application form
-
-3 Upload supporting documents
-
-Upload supporting documents
-
-Upload supporting documents
-
-4 Pay visa fee
-
-Pay visa fee
-
-Pay visa fee
-
-5 Wait for the visa to be processed
-
-Wait for the visa to be processed
-
-Wait for the
-
-visa to be processed
-
-6 e-Visa confirmation document sent by email
-
-e-Visa confirmation document sent by email
-
-e-Visa confirmation
-
-document sent by email
-
-Frequently Asked Questions Do I need a tourist visa ?
-
-Frequently Asked Questions Do I need a tourist visa ?
-
-
-FREQUENTLY ASKED QUESTIONS
---------------------------
-
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Do I need a tourist visa ?
-
-Visa Category Diplomatic & Official Visas Diplomatic or official mission Tourist Visas Tourism, MICE, Medical treatment Transit Visas Transit, sport activities, or crew Work & Business Visas Employment or Business Studying Visas Study visit and training Media & Film Crew Visas Media and film crew Religious Activities Visas Religions activities Research & Science Visas Research or science Staying with Family Visas Retirement Courtesy Visas Medical Treatment Smart Visas Talent, Investor, Executive, Startup Long-Term Resident Visas 10 years visa for long term residents Destination Thailand Visa (DTV) Workcation and Thai soft power related activities Thailand Privilege Card Long term visa with more privileges Other Visas *All applications are subject to approval and the Royal Thai Embassy or Consulate-General may request for an interview or additional documents. Submission of a visa application does not necessarily mean that a visa will be granted. Please also note that the visa fees are non-refundable.
-
-Visa Category Diplomatic & Official Visas Diplomatic or official mission Tourist Visas Tourism, MICE, Medical treatment Transit Visas Transit, sport activities, or crew Work & Business Visas Employment or Business Studying Visas Study visit and training Media & Film Crew Visas Media and film crew Religious Activities Visas Religions activities Research & Science Visas Research or science Staying with Family Visas Retirement Courtesy Visas Medical Treatment Smart Visas Talent, Investor, Executive, Startup Long-Term Resident Visas 10 years visa for long term residents Destination Thailand Visa (DTV) Workcation and Thai soft power related activities Thailand Privilege Card Long term visa with more privileges Other Visas *All applications are subject to approval and the Royal Thai Embassy or Consulate-General may request for an interview or additional documents. Submission of a visa application does not necessarily mean that a visa will be granted. Please also note that the visa fees are non-refundable.
-
-
-VISA CATEGORY
--------------
-
-
-Diplomatic & Official Visas Diplomatic or official mission Tourist Visas Tourism, MICE, Medical treatment Transit Visas Transit, sport activities, or crew Work & Business Visas Employment or Business Studying Visas Study visit and training Media & Film Crew Visas Media and film crew Religious Activities Visas Religions activities Research & Science Visas Research or science Staying with Family Visas Retirement Courtesy Visas Medical Treatment Smart Visas Talent, Investor, Executive, Startup Long-Term Resident Visas 10 years visa for long term residents Destination Thailand Visa (DTV) Workcation and Thai soft power related activities Thailand Privilege Card Long term visa with more privileges Other Visas
-
-Diplomatic & Official Visas Diplomatic or official mission
-
-Diplomatic & Official Visas Diplomatic or official mission
-
-Diplomatic & Official Visas Diplomatic or official mission
-
-Diplomatic & Official Visas
-
-Diplomatic or official mission
-
-Tourist Visas Tourism, MICE, Medical treatment
-
-Tourist Visas Tourism, MICE, Medical treatment
-
-Tourist Visas Tourism, MICE, Medical treatment
-
-Tourist Visas
-
-Tourism, MICE, Medical treatment
-
-Transit Visas Transit, sport activities, or crew
-
-Transit Visas Transit, sport activities, or crew
-
-Transit Visas Transit, sport activities, or crew
-
-Transit Visas
-
-Transit, sport activities, or crew
-
-Work & Business Visas Employment or Business
-
-Work & Business Visas Employment or Business
-
-Work & Business Visas Employment or Business
-
-Work & Business Visas
-
-Employment or Business
-
-Studying Visas Study visit and training
-
-Studying Visas Study visit and training
-
-Studying Visas Study visit and training
-
-Studying Visas
-
-Study visit and training
-
-Media & Film Crew Visas Media and film crew
-
-Media & Film Crew Visas Media and film crew
-
-Media & Film Crew Visas Media and film crew
-
-Media & Film Crew Visas
-
-Media and film crew
-
-Religious Activities Visas Religions activities
-
-Religious Activities Visas Religions activities
-
-Religious Activities Visas Religions activities
-
-Religious Activities Visas
-
-Religions activities
-
-Research & Science Visas Research or science
-
-Research & Science Visas Research or science
-
-Research & Science Visas Research or science
-
-Research & Science Visas
-
-Research or science
-
-Staying with Family Visas
-
-Staying with Family Visas
-
-Staying with Family Visas
-
-Staying with Family Visas
-
-Retirement
-
-Retirement
-
-Retirement
-
-Retirement
-
-Courtesy Visas
-
-Courtesy Visas
-
-Courtesy Visas
-
-Courtesy Visas
-
-Medical Treatment
-
-Medical Treatment
-
-Medical Treatment
-
-Medical Treatment
-
-Smart Visas Talent, Investor, Executive, Startup
-
-Smart Visas Talent, Investor, Executive, Startup
-
-Smart Visas Talent, Investor, Executive, Startup
-
-Smart Visas
-
-Talent, Investor, Executive, Startup
-
-Long-Term Resident Visas 10 years visa for long term residents
-
-Long-Term Resident Visas 10 years visa for long term residents
-
-Long-Term Resident Visas 10 years visa for long term residents
-
-Long-Term Resident Visas
-
-10 years visa for long term residents
-
-Destination Thailand Visa (DTV) Workcation and Thai soft power related activities
-
-Destination Thailand Visa (DTV) Workcation and Thai soft power related activities
-
-Destination Thailand Visa (DTV) Workcation and Thai soft power related activities
-
-Destination Thailand Visa (DTV)
-
-Workcation and Thai soft power related activities
-
-Thailand Privilege Card Long term visa with more privileges
-
-Thailand Privilege Card Long term visa with more privileges
-
-Thailand Privilege Card Long term visa with more privileges
-
-Thailand Privilege Card
-
-Long term visa with more privileges
-
-Other Visas
-
-Other Visas
-
-Other Visas
-
-Other Visas
-
-*All applications are subject to approval and the Royal Thai Embassy or Consulate-General may request for an interview or additional documents. Submission of a visa application does not necessarily mean that a visa will be granted. Please also note that the visa fees are non-refundable.
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry ©2020 Ministry of Foreign Affairs of Thailand. All Rights Reserved. Version 12F.02.07 (Images in this website is copyrighted of the Tourism Authority of Thailand)
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000 MENU Home How to Apply Online FAQ Visa Category ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000
-
-MINISTRY OF FOREIGN AFFAIRS 443 Sri Ayudhya Road,Bangkok 10400 Thailand (+66) 2203-5000
-
-
-MINISTRY OF FOREIGN AFFAIRS
----------------------------
-
-
-443 Sri Ayudhya Road,Bangkok 10400 Thailand
-
-(+66) 2203-5000
-
-MENU Home How to Apply Online FAQ Visa Category
-
-
-MENU
-----
-
-
-• Home
-
-• How to Apply Online
-
-• FAQ
-
-• Visa Category
-
-ORGANIZATION Ministry of Foreign Affairs of Thailand Thai Immigration Bureau Thai Customs Airport Authority of Thailand (AOT) Tourism Authority of Thailand Board of Investment (BOI) MICE industry
-
-
-ORGANIZATION
-------------
-
-
-• Ministry of Foreign Affairs of Thailand
-
-• Thai Immigration Bureau
-
-• Thai Customs
-
-• Airport Authority of Thailand (AOT)
-
-• Tourism Authority of Thailand
-
-• Board of Investment (BOI)
-
-• MICE industry
-
-©2020 Ministry of Foreign Affairs of Thailand. All Rights Reserved. Version 12F.02.07 (Images in this website is copyrighted of the Tourism Authority of Thailand)
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand. Cancel Acknowledge
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand. Cancel Acknowledge
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand. Cancel Acknowledge
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand. Cancel Acknowledge
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand. Cancel Acknowledge
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand. Cancel Acknowledge
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand. Cancel Acknowledge
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand.
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand.
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand.
-
-Attention : E-Visa applicants are no longer required to submit passports and supporting documents in person at the Royal Thai Embassy/Consulate-General. It is important to note that you are only able to apply if you are currently not in Thailand. After the e-Visa application has been approved, a confirmation e-mail will be sent to applicants, which can be printed out for presenting to airlines and Thai immigration officials when traveling to Thailand.
-
-Attention :
-
-Cancel Acknowledge
-
-Cancel
-
-Acknowledge
-
-════════════════════════════════════════════════════════════════════════════════════════════════════
 
